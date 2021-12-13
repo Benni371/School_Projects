@@ -1,0 +1,19 @@
+/**
+ * This file is an example of a endpoint.
+ * GET: Returns the current user object after 
+ * being authenticated. 
+ */
+const router = require(`express`).Router()
+
+router.get(`/`, async (req, res) => {
+	try {
+		//get a users info
+		res.status(200).send(req.user)
+		console.log(res)
+	} catch (error) {
+		console.error(error)
+		res.status(500).send(`There was a problem getting the user.`)
+	}
+})
+
+module.exports = router

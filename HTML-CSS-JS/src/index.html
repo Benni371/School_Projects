@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="stylesheet" href="css/style.css">
+      <link rel="shortcut icon" type="image/jpg" href="favicon.ico"/>
+      <title>The Daily Grind</title>
+    </head>
+    <body onload="readStorage(); ReadCurrent()">
+      <nav>
+        <a href="https://www.youtube.com/watch?v=xvFZjo5PgG0">Good Laugh Link</Link></a>
+      </nav>
+      <h1>The Daily Grind</h1>
+      <input id="sortBox"  onclick="toggleCheck()" type='checkbox' name='cb1' class='toggle-switch'/><label for='cb1'>Sort By Date</label>
+      <input id="compBox"  onclick="toggleCheck()" type='checkbox' name='cb2' class='toggle-switch'/><label for='cb2'>Filter Completed</label>
+        <div class="tasklist">
+        <ul id="taskList">
+        </ul>
+      </div>
+      <div>
+        <form onsubmit="createTask(event)">
+          <input oninput="StoreCurrent()" type="text" name="text" id="details"></br>
+          <input oninput="StoreCurrent()" type="date" name="date" id="date"></br>
+          <input type="submit" name="" id="create" value="Create Task"></br>
+        </form>
+      </div>
+    </body>
+    <script 
+    src="js/script.js">
+  
+    </script>
+
+    </html> 
